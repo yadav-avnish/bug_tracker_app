@@ -1,9 +1,11 @@
-
+from bug_tracker.config import bug_tracker_db
 
 class User:
 
     def __init__(self) -> None:
-        pass
+        self.user_tracker_collection =bug_tracker_db["user"]
+
+        
 
 
     def create_user(self)->None:

@@ -1,17 +1,18 @@
 
-
+from bug_tracker.config import bug_tracker_db
 class Bug:
 
 
     def __init__(self) -> None:
-        pass
+        self.bug_tracker_collection =bug_tracker_db["bug"]
 
+    def create_bug(self,bug):
+        self.bug_tracker_collection.insert_one(bug)
+        return bug
 
-    def create_bug(self)->None:
+    def close_bug(self,bug,updated_bug)->None:
         pass
-
-    def close_bug(self)->None:
-        pass
+        return True
 
     def open_bug(self)->None:
         pass 
@@ -20,10 +21,10 @@ class Bug:
         pass
 
     def list_bug(self)->None:
-        pass 
+        return self.bug_tracker_collection.find()
 
 
-    def get_bug(self):
+    def get_bug(self,bug):
         return {"bug_id":"1","bug_name":"demo_bug"}
 
     
