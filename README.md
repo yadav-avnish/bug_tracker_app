@@ -8,3 +8,8 @@ Install dependencies
 ```
 pip install -r requirements.txt
 ```
+
+to run this application
+```
+python main.py
+```
