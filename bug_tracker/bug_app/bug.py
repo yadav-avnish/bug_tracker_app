@@ -24,7 +24,7 @@ class Bug:
         return self.bug_tracker_collection.find()
 
 
-    def get_bug(self,bug):
+    def get_bug(self,):
         return {"bug_id":"1","bug_name":"demo_bug"}
 
     
